@@ -1,0 +1,72 @@
+.header {
+  max-width: 860px;
+  width: 100%;
+
+  padding: 20px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: 'Rubik',sans-serif;
+
+  &__logo {
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+  }
+
+  &__button {
+    max-width: 100px;
+    width: 100%;
+
+    padding: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid black;
+    border-radius: 10px;
+
+    background-color: transparent;
+    color: #1a1a1a;
+
+    &:hover {
+      border-color: red;
+      color: #2d4f05;
+    }
+  }
+}
+
+.nav {
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__link {
+    position: relative;
+
+    &::before{
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+
+      width: 0;
+      height: 2px;
+
+      background-color: #1a1a1a;
+      transition-duration: .3s;
+    }
+
+    &:hover{
+      &::before{
+        width: 100%;
+      }
+    }
+  }
+}
